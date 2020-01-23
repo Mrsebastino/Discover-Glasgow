@@ -13,13 +13,13 @@ function initMap() {
         { lat: 41.084045, lng: -73.874256 },
         { lat: 40.754932, lng: -73.984016 }
     ];
-
+    //the function below can take 3 arguments, need to find out what third argument can be
     let markers = locations.map(function (location, i) {
         return new google.maps.Marker({
             position: location,
             label: labels[i % labels.length]
         });
     });
-    markerCluster = new MarkerClusterer(map, markers,
+    let markerCluster = new MarkerClusterer(map, markers,
         { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
 }
