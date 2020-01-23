@@ -17,12 +17,31 @@ h5 {
   margin-top: 60px;
 }
 
+/*---Section-restaurant-pub-culture---*/
+/*bg-container {
+  height: 100vh;
+  background-image: url("../images/");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}*/
+
+ul {
+  text-align: center;
+  list-style-type: none;
+}
+
 /*-----map---*/
 
 div#map {
   text-align: center;
   width: auto;
   min-height: 360px;
+  margin-bottom: 15px;
 }
 
 /*-----Footer---*/
@@ -53,12 +72,12 @@ a.logo-footer {
 .fab {
   margin-left: 5px;
   margin-right: 5px;
-  height: 40px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
   padding: 12px 0;
   border-radius: 50px;
-  font-size: 20px;
-  margin-top: 20px;
+  font-size: 15px;
+  margin-top: 10px;
   margin-bottom: 10px;
   color: #f50a77;
   background-color: #ffffff;
