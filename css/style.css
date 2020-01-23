@@ -18,9 +18,9 @@ h5 {
 }
 
 /*---Section-restaurant-pub-culture---*/
-/*bg-container {
+bg-container {
   height: 100vh;
-  background-image: url("../images/");
+  background: url("..../assets/images/sunrise-4031987_1280.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,7 +28,7 @@ h5 {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-}*/
+}
 
 ul {
   text-align: center;
