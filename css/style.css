@@ -1,17 +1,74 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500|Montserrat:300,400,500");
 
+/*-------Header----*/
+
+/*-----Nav-bar---*/
+
+.nav-item {
+  font-family: "Montserrat", sans-serif;
+}
+
+/*---H1 etc, title-----*/
+
+h5 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 60px;
+}
+
+/*-----map---*/
+
 div#map {
   text-align: center;
   margin-top: 85px;
   min-height: 360px;
 }
 
-.nav-item {
-  font-family: "Montserrat", sans-serif;
+/*-----Footer---*/
+
+#footer {
+  position: fixed;
+  background-color: #f50a77;
+  min-height: 5em;
+  text-align: center;
 }
 
-h5 {
-  font-family: "Oswald", sans-serif;
-  text-align: center;
-  margin-top: 60px;
+a.logo-footer {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.logo-footer:hover {
+  font-size: 25px;
+  text-decoration: none;
+  color: #070707;
+}
+
+.fab {
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 40px;
+  width: 40px;
+  padding: 12px 0;
+  border-radius: 50px;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #f50a77;
+  background-color: #ffffff;
+  transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.fab:hover {
+  text-decoration: none;
+  background-color: #070707;
 }
