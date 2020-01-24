@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500|Montserrat:300,400,500");
+@import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500,600|Montserrat:300,400,500");
 
 /*-------Header----*/
 
@@ -12,20 +12,26 @@
 
 h5 {
   font-family: "Oswald", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
+  color: #ffffff;
   text-align: center;
   margin-top: 60px;
+}
+
+ul {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }
 
 /*---Section-restaurant-pub-culture---*/
 .bg-restaurant-container {
   margin-bottom: 20px;
   height: 70vh;
-  background-image: url("../images/glasgow-river-view.jpg");
+  background-image: url("../images/glasgow2_1000_667_80.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /* background-attachment: fixed;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
