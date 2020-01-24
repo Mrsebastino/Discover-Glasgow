@@ -18,13 +18,14 @@ h5 {
 }
 
 /*---Section-restaurant-pub-culture---*/
-bg-container {
-  height: 100vh;
-  background: url("..../assets/images/sunrise-4031987_1280.jpg");
-  background-position: center;
+.bg-restaurant-container {
+  margin-bottom: 20px;
+  height: 70vh;
+  background-image: url("../images/glasgow-river-view.jpg");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
