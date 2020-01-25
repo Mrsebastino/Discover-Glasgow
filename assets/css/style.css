@@ -18,10 +18,14 @@ h5 {
   margin-top: 60px;
 }
 
-ul {
+.restaurant-details,
+.pub-details,
+.culture-details {
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  text-align: center;
+  display: none; /** is too allow us to make it appear when we clicked on a button**/
 }
 
 /*---Section-restaurant-pub-culture---*/
