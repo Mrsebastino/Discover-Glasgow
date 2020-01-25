@@ -54,7 +54,6 @@ div#map {
 /*-----Footer---*/
 
 #footer {
-  position: fixed;
   background-color: #f50a77;
   min-height: 5em;
   text-align: center;
