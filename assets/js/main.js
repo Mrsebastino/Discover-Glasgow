@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     $(".restaurant-container").click(function () {
-        $(".restaurant-details").toggle();
+        $(".restaurantDetails,.recommendedRestaurant").toggle();
     });
     $(".pub-container").click(function () {
         $(".pub-details").toggle();
