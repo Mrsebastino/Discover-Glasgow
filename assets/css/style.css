@@ -1,14 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500,600|Montserrat:300,400,500");
 
-/*-------Header----*/
-
-/*-----Nav-bar---*/
+/*-----Nav-bar- Header---*/
 
 .nav-item {
   font-family: "Montserrat", sans-serif;
 }
 
+
+
 /*---H1 etc, title-----*/
+
+.container-about {
+  margin-top: 60px;
+  font-family: "Montserrat", sans-serif;
+}
 
 h5 {
   font-family: "Oswald", sans-serif;
