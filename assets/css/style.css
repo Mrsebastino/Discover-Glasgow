@@ -21,6 +21,8 @@ h5 {
   margin-top: 15px;
 }
 
+/*---Section-restaurant-pub-culture---*/
+
 .restaurantDetails,
 .pubDetails,
 .cultureDetails {
@@ -43,7 +45,6 @@ h5 {
   display: none; /** is too allow us to make it appear when we clicked on a button**/
 }
 
-/*---Section-restaurant-pub-culture---*/
 .bg-restaurant-container {
   margin-bottom: 20px;
   height: 100vh;
@@ -54,11 +55,6 @@ h5 {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-}
-
-ul {
-  text-align: center;
-  list-style-type: none;
 }
 
 /*-----map---*/

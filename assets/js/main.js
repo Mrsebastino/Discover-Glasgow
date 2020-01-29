@@ -7,7 +7,7 @@ $(document).ready(function () {
         $(".pubDetails, .recommendedPubs").toggle();
     });
     $(".culture-container").click(function () {
-        $(".cultureDetails, recommendedPubs").toggle();
+        $(".cultureDetails, .recommendedCulture").toggle();
     });
 
 });
