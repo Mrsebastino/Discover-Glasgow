@@ -22,8 +22,8 @@ h5 {
 }
 
 .restaurantDetails,
-.pub-details,
-.culture-details {
+.pubDetails,
+.cultureDetails {
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -32,7 +32,9 @@ h5 {
   margin-bottom: 5px;
   display: none; /** is too allow us to make it appear when we clicked on a button**/
 }
-.recommendedRestaurant {
+.recommendedRestaurant,
+.recommendedPubs,
+.recommendedCulture {
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -45,7 +47,7 @@ h5 {
 .bg-restaurant-container {
   margin-bottom: 20px;
   height: 100vh;
-  background-image: url("../images/glasgow-city-centre-bridge-1024x576.jpg");
+  background-image: url("../images/glasgow-goma.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

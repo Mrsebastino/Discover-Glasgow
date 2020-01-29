@@ -4,10 +4,10 @@ $(document).ready(function () {
         $(".restaurantDetails,.recommendedRestaurant").toggle();
     });
     $(".pub-container").click(function () {
-        $(".pub-details").toggle();
+        $(".pubDetails, .recommendedPubs").toggle();
     });
     $(".culture-container").click(function () {
-        $(".culture-details").toggle();
+        $(".cultureDetails, recommendedPubs").toggle();
     });
 
 });
