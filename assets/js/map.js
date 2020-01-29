@@ -1,6 +1,6 @@
 function initMap() {
     let mapOptions = {
-        zoom: 8,
+        zoom: 13,
         center: new google.maps.LatLng(55.87751, -4.2914007),
         mapTypeId: 'roadmap'
     };
@@ -13,8 +13,8 @@ function initMap() {
         title: 'Cail Bruich'
     });
 
-    let contentString = `<div id="content"><h1>Cail Bruich</h1><p>Cail Bruich has been one thekbhhj hgjh 
-     it stillmlm lkjlkl ihiooi</p></div>`;
+    let contentString = `<div id="content"><h2>Cail Bruich</h2><p>Cail Bruich has been one thekbhhj hgjh 
+     it stillmlm lkjlkl ihiooi. Attribution:<a href="https://www.cailbruich.co.uk" target="_blank">"https://www.cailbruich.co.uk"</a></p></div>`;
 
     let infowindow = new google.maps.InfoWindow({
         content: contentString
