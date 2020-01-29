@@ -57,13 +57,21 @@ h5 {
   -o-background-size: cover;
 }
 
-/*-----map---*/
+/*-----map-search-bar---*/
 
 div#map {
   text-align: center;
   width: auto;
   min-height: 360px;
   margin-bottom: 15px;
+}
+
+#pac-input {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+  width: 500px;
 }
 
 /*-----Footer---*/
@@ -100,7 +108,7 @@ a.logo-footer {
   font-size: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
-  color: #f50a77;
+  color: #8f8a8c;
   background-color: #ffffff;
   transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
