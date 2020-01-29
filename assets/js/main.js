@@ -10,10 +10,4 @@ $(document).ready(function () {
         $(".cultureDetails, .recommendedCulture").toggle();
     });
 
-    $("#mapMarker").click(function () {
-        $("#mapMarker").
-
-        });
-});
-
 });

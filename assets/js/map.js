@@ -7,10 +7,17 @@ function initMap() {
     let map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
     let cailBruichPosition = { lat: 55.87751, lng: -4.2914007 };
-    let marker = new google.maps.Marker({
+
+    /* let bastaPizzaPosition = {
+         lat: 55.8706124, lng: -4.3181257,
+         map: map,
+         title: 'Basta Pizza'
+     };*/
+
+    let markers = new google.maps.Marker({
         position: cailBruichPosition,
         map: map,
-        title: 'Cail Bruich'
+        title: 'Cail Bruich',
     });
 
     let contentString = `<div id="content"><h2>Cail Bruich</h2><p>Cail Bruich has been one thekbhhj hgjh 
@@ -20,8 +27,8 @@ function initMap() {
         content: contentString
     });
 
-    marker.addListener('click', function () {
-        infowindow.open(map, marker);
+    markers.addListener('click', function () {
+        infowindow.open(map, markers);
     });
 
 }
