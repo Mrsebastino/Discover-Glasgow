@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    /*this is to have more information displayed when we click on button*/
     $(".restaurant-container").click(function () {
         $(".restaurantDetails,.recommendedRestaurant").toggle();
     });
