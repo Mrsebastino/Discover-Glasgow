@@ -36,24 +36,25 @@ function initMap() {
             infowindow.open(map, marker);
         });
     }
+
     /* pass every location to place marker*/
     locations.forEach(placeMarker);
 
     google.maps.event.addDomListener(window, 'load', initMap);
-
-    /*allow us to zoom to the location on the map*/
-    /* function goToLocation(locationIndex) {
-         let location = locations[locationIndex];
-          google.maps.event.addListener(function () {
-              goToLocation(location);
-          });
-     }*/
 }
+/*allow us to zoom to the location on the map*/
+/* function goToLocation(locationIndex) {
+     let location = locations[locationIndex];
+      google.maps.event.addListener(function () {
+          goToLocation(location);
+      });
+ }*/
 
 function goToLocation(locationIndex) {
     let location = locations[locationIndex];
-    /*let mapBasta = document.getElementsByTagName("button");*/
-    document.getElementById("mapBasta").addEventListener("click", function () {
-        goToLocation(map, locations[0, 1]);
-    });
-}
+    $(document).onHTMLButtonElement.InfoWindow("click", "#mapBasta");
+    /*let beachMarker = document.getElementById("mapBasta");
+    beachMarker.addEventListener("click", function () {
+        infowindow.open(map, beachMarker, location);*/
+};
+
