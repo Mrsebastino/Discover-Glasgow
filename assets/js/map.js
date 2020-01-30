@@ -1,7 +1,7 @@
 const locations = [
-    { lat: 55.87751, lng: -4.2914007, name: "Cail Bruich", website: "https://www.google.com" },
-    { lat: 55.8706124, lng: -4.3181257, name: "Basta Pizza" },
-    { lat: 55.8723885, lng: -4.2847306, name: "Catch of The Day" },
+    { lat: 55.87751, lng: -4.2914007, name: "Cail Bruich", website: "https://www.cailbruich.co.uk/" },
+    { lat: 55.8706124, lng: -4.3181257, name: "Basta Pizza", website: "https://www.bastapizza.com/ " },
+    { lat: 55.8723885, lng: -4.2847306, name: "Catch Fish & Chips", website: "https://catchfishandchips.co.uk/" },
 ];
 
 function initMap() {
@@ -19,7 +19,7 @@ function initMap() {
 
         google.maps.event.addListener(marker, 'click', function () {
             infowindow.close();
-            infowindow.setContent(`<div id="infowindow">${loc.name}<a href=${loc.website}>Website</a></div >`);
+            infowindow.setContent(`<div id="infowindow">${loc.name}<a href=${loc.website} target="_blank">Website</a></div >`);
             infowindow.open(map, marker);
         });
     }
