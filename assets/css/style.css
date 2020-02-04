@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500,600|Montserrat:300,400,500");
+@import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700|Montserrat:300,400,500");
 
 /*-----Nav-bar- Header---*/
 
@@ -9,8 +9,15 @@
 /*---H1 etc, title-----*/
 
 .container-about {
-  margin-top: 60px;
+  margin-top: 20px;
   font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  margin-top: 60px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  text-align: center;
 }
 
 h5 {
@@ -41,6 +48,7 @@ h5 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 19px;
+  height: auto;
   text-align: center;
   display: none; /** is too allow us to make it appear when we clicked on a button**/
 }
