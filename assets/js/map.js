@@ -8,7 +8,6 @@ const locations = [
     {
         lat: 55.8706124, lng: -4.3181257,
         name: "Basta Pizza",
-        placement: "href= bastaPizza",
         website: "https://www.bastapizza.com/ "
     },
 
@@ -43,15 +42,15 @@ function initMap() {
     locations.forEach(placeMarker);
 
     google.maps.event.addDomListener(window, 'load', initMap);
-}
-/*allow us to zoom to the location on the map*/
+};
+/*allow us to zoom to the location on the map
 function goToLocation(locationIndex) {
     let location = locations[locationIndex];
     document.getElementById("mapBasta").addEventListener("click", function () {
         return location[1];
-    });
-    /*let infowindow = new google.maps.InfoWindow();
-    document.getElementById("mapBasta"),
-    infowindow.open(map, location, [1]);*/
-};
+    });*/
+/*let infowindow = new google.maps.InfoWindow();
+document.getElementById("mapBasta"),
+infowindow.open(map, location, [1]);*/
+
 
