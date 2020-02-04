@@ -1,9 +1,27 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700|Montserrat:300,400,500");
 
+body {
+  background-color: bisque;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
 /*-----Nav-bar- Header---*/
 
-.nav-item {
+.navbar-light .navbar-brand {
   font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #f50a77;
+  box-shadow: -5px 8px 12px 0px black;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #f50a77;
 }
 
 /*---H1 etc, title-----*/
@@ -36,9 +54,9 @@ h5 {
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  font-size-adjust: 0.58;
   text-align: center;
-  height: auto;
-  margin-bottom: 5px;
+  margin-bottom: 0;
   display: none; /** is too allow us to make it appear when we clicked on a button**/
 }
 .recommendedRestaurant,
@@ -48,50 +66,51 @@ h5 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 19px;
-  height: auto;
   text-align: center;
   display: none; /** is too allow us to make it appear when we clicked on a button**/
 }
 
 .bg-restaurant-container {
   margin-bottom: 20px;
-  height: 100vh;
+  height: auto;
   background-image: url("../images/glasgow-goma.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: auto;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
 }
 
-/*-----map-search-bar---*/
+/*---map--*/
 
 div#map {
   text-align: center;
   width: auto;
-  min-height: 360px;
-  margin-bottom: 15px;
+  min-height: 400px;
+  margin-bottom: 7em;
 }
 
+/*
 #pac-input {
   font-family: "Oswald", sans-serif;
   font-weight: bold;
   color: #2c3e50;
   text-align: center;
   width: 500px;
-}
+}*/
 
 /*-----Footer---*/
 
 #footer {
-  background-color: #f50a77;
-  min-height: 5em;
+  position: fixed;
+  bottom: 0;
+  background-color: #343a40;
   text-align: center;
 }
 
 a.logo-footer {
-  color: #ffffff;
+  color: #f50a77;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
@@ -101,9 +120,9 @@ a.logo-footer {
 }
 
 .logo-footer:hover {
-  font-size: 25px;
+  font-size: 20px;
   text-decoration: none;
-  color: #070707;
+  color: #f50a77;
 }
 
 .fab {
@@ -126,5 +145,15 @@ a.logo-footer {
 
 .fab:hover {
   text-decoration: none;
-  background-color: #070707;
+  background-color: #f50a77;
+}
+
+/*---media-queries---*/
+
+@media (max-width: 768px) {
+  .restaurantDetails,
+  .pubDetails,
+  .cultureDetails {
+    display: none;
+  }
 }
