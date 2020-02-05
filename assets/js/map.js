@@ -74,19 +74,19 @@ function initMap() {
     }
 
 
-    /* pass every location to place marker*/
+    /*pass every location to place marker*/
     locations.forEach(placeMarker);
 
     google.maps.event.addDomListener(window, 'load', initMap);
-};
-/*allow us to zoom to the location on the map
-function goToLocation(locationIndex) {
-    let location = locations[locationIndex];
-    document.getElementById("mapBasta").addEventListener("click", function () {
-        return location[1];
-    });*/
-/*let infowindow = new google.maps.InfoWindow();
-document.getElementById("mapBasta"),
-infowindow.open(map, location, [1]);*/
 
 
+    /*allow us to zoom to the location on the map
+    function goToLocation(locationIndex) {
+        let location = locations[locationIndex];
+        document.getElementById("mapBasta").addEventListener("click", function () {
+            return location[1];
+        });*/
+    /*let infowindow = new google.maps.InfoWindow();
+    document.getElementById("mapBasta"),
+    infowindow.open(map, location, [1]);*/
+}
