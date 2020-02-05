@@ -9,7 +9,7 @@ body {
   padding: 0;
 }
 
-/*-----Nav-bar- Header---*/
+/*-----Nav-bar- Header----*/
 
 .navbar-light .navbar-brand {
   font-family: "Montserrat", sans-serif;
@@ -24,6 +24,11 @@ body {
   color: #f50a77;
 }
 
+/*----Form----*/
+.search-form {
+  text-align: center;
+  padding-bottom: 1em;
+}
 /*---H1 etc, title-----*/
 
 .container-about {
@@ -71,8 +76,8 @@ h5 {
 }
 
 .bg-restaurant-container {
-  margin-bottom: 20px;
-  height: auto;
+  margin-bottom: 8em;
+  height: 100vh;
   background-image: url("../images/glasgow-goma.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -88,17 +93,8 @@ div#map {
   text-align: center;
   width: auto;
   min-height: 400px;
-  margin-bottom: 7em;
+  margin-bottom: 2em;
 }
-
-/*
-#pac-input {
-  font-family: "Oswald", sans-serif;
-  font-weight: bold;
-  color: #2c3e50;
-  text-align: center;
-  width: 500px;
-}*/
 
 /*-----Footer---*/
 
