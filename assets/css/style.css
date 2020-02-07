@@ -4,6 +4,7 @@ body {
   background-color: bisque;
 }
 
+/*-- the below code is too removed extra space on the left, the sames thing happened in my first milestone--*/
 .row {
   margin: 0;
   padding: 0;
@@ -29,7 +30,7 @@ body {
   text-align: center;
   padding-bottom: 1em;
 }
-/*---H1 etc, title-----*/
+/*---H1-title-button-----*/
 
 .container-about {
   margin-top: 20px;
@@ -51,6 +52,9 @@ h5 {
   margin-top: 15px;
 }
 
+#demo {
+  text-align: center;
+}
 /*---Section-restaurant-pub-culture---*/
 
 .restaurantDetails,
@@ -59,7 +63,6 @@ h5 {
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size-adjust: 0.58;
   text-align: center;
   margin-bottom: 0;
   display: none; /** is too allow us to make it appear when we clicked on a button**/
@@ -70,7 +73,9 @@ h5 {
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 19px;
+  font-size: 16px;
+  border-radius: 50%;
+  background: slategrey;
   text-align: center;
   display: none; /** is too allow us to make it appear when we clicked on a button**/
 }
