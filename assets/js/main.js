@@ -26,5 +26,11 @@ $(document).ready(function () {
             $(".recommendedCulture").toggle(1000);
         };
     });
+
+    $("#mapBasta").click(function () {
+
+    });
+
 });
+
 
