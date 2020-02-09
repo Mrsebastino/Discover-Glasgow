@@ -26,9 +26,9 @@ $(document).ready(function () {
             $(".recommendedCulture").toggle(1000);
         };
     });
-
+    /* this is working*/
     $("#mapBasta").click(function () {
-
+        alert("you called");
     });
 
 });
