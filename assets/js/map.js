@@ -8,6 +8,7 @@ const locations = [
     {
         lat: 55.8706124, lng: -4.3181257,
         name: "Basta Pizza",
+        locator: "#mapBasta",
         website: "https://www.bastapizza.com/ "
     },
 
@@ -71,7 +72,7 @@ function initMap() {
             infowindow.setContent(`<div id="infowindow">${location.name} <a href=${location.website} target="_blank">Website</a></div >`);
             infowindow.open(map, marker);
         });
-
+        /*need to build an if statement to work with locator*/
         $("#mapBasta").click(function () {
             google.maps.event.trigger("#mapBasta", "click");
             infowindow.setContent(`<div id="infowindow">${location.name} <a href=${location.website} target="_blank">Website</a></div >`);
