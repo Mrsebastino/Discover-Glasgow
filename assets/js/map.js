@@ -71,24 +71,21 @@ function initMap() {
             infowindow.setContent(`<div id="infowindow">${location.name} <a href=${location.website} target="_blank">Website</a></div >`);
             infowindow.open(map, marker);
         });
-    }
 
+        $("#mapBasta").click(function () {
+            google.maps.event.trigger("#mapBasta", "click");
+            infowindow.setContent(`<div id="infowindow">${location.name} <a href=${location.website} target="_blank">Website</a></div >`);
+            infowindow.open(map, marker);
+        });
+    }
 
     /*pass every location to place marker*/
     locations.forEach(placeMarker);
 
     google.maps.event.addDomListener(window, 'load', initMap);
 
-
-    /*allow us to zoom to the location on the map*/
-    /*document.getElementById("mapBasta").addEventListener("click", function () {
-        return location[1];
-    });
-
-    function goToLocation() {
-        let location = locations[0].name;
-        alert("it's working");
-        /*let infowindow = new google.maps.InfoWindow();
-        document.getElementById("mapBasta"),
-            infowindow.open(map, location, [1]);*/
 }
+
+/* google.maps.event.trigger(marker, 'click');
+            infowindow.setContent(`<div id="infowindow">${locations.name} <a href=${location.website} target="_blank">Website</a></div >`);
+            infowindow.open(map, marker);*/
