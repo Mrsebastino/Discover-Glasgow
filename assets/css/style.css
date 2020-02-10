@@ -19,7 +19,7 @@ body {
   box-shadow: -5px 8px 12px 0px black;
 }
 
-.navbar-light .navbar-nav .active > .nav-link {
+.navbar-light .navbar-nav .active>.nav-link {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: #f50a77;
@@ -30,6 +30,7 @@ body {
   text-align: center;
   padding-bottom: 1em;
 }
+
 /*---H1-title-button-----*/
 
 .container-about {
@@ -55,6 +56,7 @@ h5 {
 #demo {
   text-align: center;
 }
+
 /*---Section-restaurant-pub-culture---*/
 
 .restaurantDetails,
@@ -65,8 +67,10 @@ h5 {
   font-weight: 500;
   text-align: center;
   margin-bottom: 0;
-  display: none; /** is too allow us to make it appear when we clicked on a button**/
+  display: none;
+  /** is too allow us to make it appear when we clicked on a button**/
 }
+
 .recommendedRestaurant,
 .recommendedPubs,
 .recommendedCulture {
@@ -77,7 +81,8 @@ h5 {
   border-radius: 50%;
   background: slategrey;
   text-align: center;
-  display: none; /** is too allow us to make it appear when we clicked on a button**/
+  display: none;
+  /** is too allow us to make it appear when we clicked on a button**/
 }
 
 .bg-restaurant-container {
@@ -150,11 +155,3 @@ a.logo-footer {
 }
 
 /*---media-queries---*/
-
-@media (max-width: 768px) {
-  .restaurantDetails,
-  .pubDetails,
-  .cultureDetails {
-    display: none;
-  }
-}
