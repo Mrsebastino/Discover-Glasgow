@@ -4,7 +4,7 @@ body {
   background-color: bisque;
 }
 
-/*-- the below code is too removed extra space on the left, the sames thing happened in my first milestone--*/
+/*-- the below code is too removed extra space on the right, the sames thing happened in my first milestone--*/
 .row {
   margin: 0;
   padding: 0;
@@ -19,7 +19,7 @@ body {
   box-shadow: -5px 8px 12px 0px black;
 }
 
-.navbar-light .navbar-nav .active>.nav-link {
+.navbar-light .navbar-nav .active > .nav-link {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: #f50a77;
