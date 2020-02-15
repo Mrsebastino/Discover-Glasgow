@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     //this is to have more information displayed when we click on button
     // one is general info and one is a top 3
@@ -10,7 +11,7 @@ $(document).ready(function () {
             $(".recommendedRestaurant").toggle(1000);
         };
     });
-    $(".pub-container").click(function () {
+    $("#more-drink").click(function () {
         let pub_cont_detail = window.matchMedia("(min-width:768px)");
         if (window.matchMedia("(min-width:768px)").matches) {
             $(".pubDetails, .recommendedPubs").toggle(1000);
@@ -18,7 +19,7 @@ $(document).ready(function () {
             $(".recommendedPubs").toggle(1000);
         };
     });
-    $(".culture-container").click(function () {
+    $("#more-art").click(function () {
         let cult_cont_detail = window.matchMedia("(min-width:768px)");
         if (window.matchMedia("(min-width:768px)").matches) {
             $(".cultureDetails, .recommendedCulture").toggle(1000);
@@ -26,6 +27,9 @@ $(document).ready(function () {
             $(".recommendedCulture").toggle(1000);
         };
     });
-});
+    $('.navbar-collapse a').click(function () {
+        $(".navbar-collapse").collapse('hide');
+    });
 
+})
 
