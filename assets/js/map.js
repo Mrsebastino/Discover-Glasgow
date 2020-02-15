@@ -56,37 +56,88 @@ const locations = [
 ];
 
 function initMap() {
-    let infowindow = new google.maps.InfoWindow();
-    let map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 13,
-        center: new google.maps.LatLng(55.860916, -4.251433)
+    let options = {
+        center: new google.maps.LatLng(55.860916, -4.251433),
+        zoom: 12
+    };
+
+    map = new google.maps.Map(document.getElementById("map"), options);
+    let input = document.getElementById("search");
+    let searchBox = new google.maps.places.SearchBox(input);
+
+    //making sure searches are local
+    map.addListener("bounds_changed", function () {
+        searchBox.setBounds(map.getBounds());
     });
 
-    function placeMarker(location) {
-        let marker = new google.maps.Marker({
-            position: new google.maps.LatLng(location.lat, location.lng),
+    //to see our search on the map
+    let markers = [];
+
+    searchBox.addListener("places_changed", function () {
+        let places = searchBox.getPlaces();
+
+        if (places.lenght === 0)
+            return;
+
+        // to clear any markers from previous search
+        markers.forEach(function (m) { m.setMap(null); });
+        markers = [];
+
+        let bounds = new google.maps.LatLngBounds();
+
+        // checking that places have a geometry to put on the map
+        places.forEach(function (p) {
+            if (!p.geometry)
+                return;
+
+            markers.push(new google.maps.Marker({
+                map: map,
+                title: p.name,
+                position: p.geometry.location
+            }));
+
+            if (places.geometry.viewport)
+                bounds.union(p.geometry.viewport);
+            else
+                bounds.extend(p.geometry.location);
+        });
+        map.fitBounds(bounds);
+    });
+
+    /*function placeMarker(location) {
+        let infowindow = new google.maps.InfoWindow();
+        let placeMarker = new google.maps.Marker({
+            location: new google.maps.LatLng(location.lat, location.lng),
             map: map
         });
-
-        google.maps.event.addListener(marker, "click", function () {
+        // looks like there is no need  for this now and the one above
+        google.maps.event.addListener(placeMarker, "click", function () {
             infowindow.setContent(`<div id="infowindow">${location.name} <a href=${location.website} target="_blank">Website</a></div >`);
-            infowindow.open(map, marker);
+            infowindow.open(map, placeMarker);
         });
-        /*need to build an if statement to work with locator*/
-        $("#mapBasta").click(function () {
-            google.maps.event.trigger("#mapBasta", "click");
-            infowindow.setContent(`<div id="infowindow">${location.name} <a href=${location.website} target="_blank">Website</a></div >`);
-            infowindow.open(map, marker);
-        });
-    }
 
-    /*pass every location to place marker*/
-    locations.forEach(placeMarker);
+        //pass every location to place marker
+        locations.forEach(placeMarker);
 
-    google.maps.event.addDomListener(window, 'load', initMap);
+        google.maps.event.addDomListener(window, 'load', initMap);
 
+    }*/
 }
+
+
+
+
 
 /* google.maps.event.trigger(marker, 'click');
             infowindow.setContent(`<div id="infowindow">${locations.name} <a href=${location.website} target="_blank">Website</a></div >`);
             infowindow.open(map, marker);*/
+
+/*need to build an if statement to work with locator
+$("#mapBasta").click(function () {
+google.maps.event.trigger("#mapBasta", "click", function () {
+    if (this.id === locations.locator) {
+        infowindow.setContent(`<div id="infowindow">${location.name} <a href=${location.website} target="_blank">Website</a></div >`);
+        infowindow.open(map, marker);
+    }
+});
+});*/
