@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700|Montserrat:300,400,500");
 
 body {
-  background-color: bisque;
+  background-color: #dadada;
 }
 
 /*-- the below code is too removed extra space on the right, the sames thing happened in my first milestone--*/
@@ -15,31 +15,42 @@ body {
 .navbar-light .navbar-brand {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  color: #f50a77;
+  color: #ffffff;
   box-shadow: -5px 8px 12px 0px black;
 }
 
-.navbar-light .navbar-nav .active > .nav-link {
+.navbar-light .navbar-brand:hover {
+  display: none;
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  color: #f50a77;
+  color: #ffffff;
 }
 
 /*----Form----*/
+input {
+  width: 300px;
+}
+
 .search-form {
   text-align: center;
-  padding-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 /*---H1-title-button-----*/
 
-.container-about {
+.intro {
+  padding: 5em;
   margin-top: 20px;
+  color: #ffffff;
+  font-weight: 500;
   font-family: "Montserrat", sans-serif;
 }
 
 h2 {
-  margin-top: 60px;
+  margin-top: 3em;
   font-family: "Oswald", sans-serif;
   font-weight: 700;
   text-align: center;
@@ -53,20 +64,40 @@ h5 {
   margin-top: 15px;
 }
 
-#demo {
-  text-align: center;
-}
 
 /*---Section-restaurant-pub-culture---*/
+
+#more-art,
+#more-food,
+#more-drink {
+  margin-top: 3em;
+
+}
+
+.container-about {
+  margin-bottom: 8em;
+  height: 60vh;
+  background-image: url("../images/glasgow-goma.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
 
 .restaurantDetails,
 .pubDetails,
 .cultureDetails {
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 18px;
   text-align: center;
-  margin-bottom: 0;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-top: 4em;
+  text-shadow: #000 50px 50px 10px;
   display: none;
   /** is too allow us to make it appear when we clicked on a button**/
 }
@@ -77,18 +108,42 @@ h5 {
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  border-radius: 50%;
-  background: slategrey;
+  font-size: 20px;
+  padding-top: 3em;
+  text-shadow: #000 1px 10px 10px;
   text-align: center;
   display: none;
   /** is too allow us to make it appear when we clicked on a button**/
 }
 
+.bg-culture-container {
+  margin-bottom: 8em;
+  height: 100vh;
+  background-image: url("../images/glasgow-uni.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
 .bg-restaurant-container {
   margin-bottom: 8em;
   height: 100vh;
-  background-image: url("../images/glasgow-goma.jpg");
+  background-image: url("../images/glasgow-street-art.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.bg-pub-container {
+  margin-bottom: 8em;
+  height: 100vh;
+  background-image: url("../images/cozy-pub.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
@@ -116,7 +171,7 @@ div#map {
 }
 
 a.logo-footer {
-  color: #f50a77;
+  color: #ffffff;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
@@ -128,7 +183,7 @@ a.logo-footer {
 .logo-footer:hover {
   font-size: 20px;
   text-decoration: none;
-  color: #f50a77;
+  color: #ffffff;
 }
 
 .fab {
@@ -151,7 +206,7 @@ a.logo-footer {
 
 .fab:hover {
   text-decoration: none;
-  background-color: #f50a77;
+  background-color: bisque;
 }
 
 /*---media-queries---*/
