@@ -46,6 +46,7 @@ input {
   margin-top: 20px;
   color: #ffffff;
   font-weight: 500;
+  font-size: 20px;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -74,24 +75,12 @@ h5 {
 
 }
 
-.container-about {
-  margin-bottom: 8em;
-  height: 60vh;
-  background-image: url("../images/glasgow-goma.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-}
-
 .restaurantDetails,
 .pubDetails,
 .cultureDetails {
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 18px;
   text-align: center;
   padding-left: 5em;
@@ -116,10 +105,22 @@ h5 {
   /** is too allow us to make it appear when we clicked on a button**/
 }
 
+.container-about {
+  margin-bottom: 8em;
+  height: 100vh;
+  background-image: url("../images/glasgow-goma.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
 .bg-culture-container {
   margin-bottom: 8em;
   height: 100vh;
-  background-image: url("../images/glasgow-uni.jpg");
+  background-image: url("../images/glasgow-uni-edit.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
@@ -131,7 +132,7 @@ h5 {
 .bg-restaurant-container {
   margin-bottom: 8em;
   height: 100vh;
-  background-image: url("../images/glasgow-street-art.jpg");
+  background-image: url("../images/glasgow-street-art-edit.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
@@ -210,3 +211,9 @@ a.logo-footer {
 }
 
 /*---media-queries---*/
+
+@media(max-width: 700px) {
+  .intro {
+    font-size: 75%;
+  }
+}
