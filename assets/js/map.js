@@ -8,7 +8,6 @@ const locations = [
     {
         lat: 55.8706124, lng: -4.3181257,
         name: "Basta Pizza",
-        locator: "#mapBasta",
         website: "https://www.bastapizza.com/ "
     },
 
@@ -61,6 +60,23 @@ function initMap() {
         zoom: 12
     };
 
+
+    function placeMarker(location) {
+        map = new google.maps.Map(document.getElementById("map"), options);
+        let infowindow = new google.maps.InfoWindow();
+        let placeMarker = new google.maps.Marker({
+            location: new google.maps.LatLng(location.lat, location.lng),
+            map: map
+        });
+
+        // looks like there is no need  for this now and the one above
+        google.maps.event.addListener(placeMarker, "click", function () {
+            infowindow.setContent(`<div id="infowindow">${location.name} <a href=${location.website} target="_blank">Website</a></div >`);
+            infowindow.open(map, placeMarker);
+        });
+
+    };
+
     map = new google.maps.Map(document.getElementById("map"), options);
     let input = document.getElementById("search");
     let searchBox = new google.maps.places.SearchBox(input);
@@ -80,48 +96,29 @@ function initMap() {
             return;
 
         // to clear any markers from previous search
-        markers.forEach(function (m) { m.setMap(null); });
+        markers.forEach(function (marker) { marker.setMap(null); });
         markers = [];
 
         let bounds = new google.maps.LatLngBounds();
 
         // checking that places have a geometry to put on the map
-        places.forEach(function (p) {
-            if (!p.geometry)
+        places.forEach(function (place) {
+            if (!place.geometry)
                 return;
 
             markers.push(new google.maps.Marker({
                 map: map,
-                title: p.name,
-                position: p.geometry.location
+                title: place.name,
+                position: place.geometry.location
             }));
 
-            if (places.geometry.viewport)
-                bounds.union(p.geometry.viewport);
+            if (place.geometry.viewport)
+                bounds.union(place.geometry.viewport);
             else
-                bounds.extend(p.geometry.location);
+                bounds.extend(place.geometry.location);
         });
         map.fitBounds(bounds);
     });
-
-    /*function placeMarker(location) {
-        let infowindow = new google.maps.InfoWindow();
-        let placeMarker = new google.maps.Marker({
-            location: new google.maps.LatLng(location.lat, location.lng),
-            map: map
-        });
-        // looks like there is no need  for this now and the one above
-        google.maps.event.addListener(placeMarker, "click", function () {
-            infowindow.setContent(`<div id="infowindow">${location.name} <a href=${location.website} target="_blank">Website</a></div >`);
-            infowindow.open(map, placeMarker);
-        });
-
-        //pass every location to place marker
-        locations.forEach(placeMarker);
-
-        google.maps.event.addDomListener(window, 'load', initMap);
-
-    }*/
 }
 
 

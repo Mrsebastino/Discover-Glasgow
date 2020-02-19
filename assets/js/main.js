@@ -27,6 +27,9 @@ $(document).ready(function () {
             $(".recommendedCulture").toggle(1000);
         };
     });
+
+    // allow us to view better on small screen
+    // the navbar was hiding the button of each section
     $('.navbar-collapse a').click(function () {
         $(".navbar-collapse").collapse('hide');
     });
