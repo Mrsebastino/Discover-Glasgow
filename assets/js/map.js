@@ -55,23 +55,21 @@ const locations = [
 ];
 
 function initMap() {
+    let infowindow = new google.maps.InfoWindow();
     let options = {
         center: new google.maps.LatLng(55.860916, -4.251433),
         zoom: 12
     };
 
 
-    function placeMarker(locations) {
-        //map = new google.maps.Map(document.getElementById("map"), options);
-        let infowindow = new google.maps.InfoWindow();
+    function placeMarker(location) {
         let placeMarker = new google.maps.Marker({
-            location: new google.maps.LatLng(locations.lat, locations.lng),
+            position: new google.maps.LatLng(location.lat, location.lng),
             map: map
         });
 
-
         google.maps.event.addListener(placeMarker, "click", function () {
-            infowindow.setContent(`<div id="infowindow">${locations.name} <a href=${locations.website} target="_blank">Website</a></div >`);
+            infowindow.setContent(`<div id="infowindow">${location.name} <a href=${location.website} target="_blank">Website</a></div >`);
             infowindow.open(map, placeMarker);
         });
 
