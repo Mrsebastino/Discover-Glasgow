@@ -61,19 +61,20 @@ function initMap() {
     };
 
 
-    function placeMarker(location) {
-        map = new google.maps.Map(document.getElementById("map"), options);
+    function placeMarker(locations) {
+        //map = new google.maps.Map(document.getElementById("map"), options);
         let infowindow = new google.maps.InfoWindow();
         let placeMarker = new google.maps.Marker({
-            location: new google.maps.LatLng(location.lat, location.lng),
+            location: new google.maps.LatLng(locations.lat, locations.lng),
             map: map
         });
 
-        // looks like there is no need  for this now and the one above
+
         google.maps.event.addListener(placeMarker, "click", function () {
-            infowindow.setContent(`<div id="infowindow">${location.name} <a href=${location.website} target="_blank">Website</a></div >`);
+            infowindow.setContent(`<div id="infowindow">${locations.name} <a href=${locations.website} target="_blank">Website</a></div >`);
             infowindow.open(map, placeMarker);
         });
+
 
     };
 
@@ -109,7 +110,7 @@ function initMap() {
             markers.push(new google.maps.Marker({
                 map: map,
                 title: place.name,
-                position: place.geometry.location
+                position: place.geometry.location,
             }));
 
             if (place.geometry.viewport)
@@ -119,7 +120,15 @@ function initMap() {
         });
         map.fitBounds(bounds);
     });
+
+
+    //pass every location to place marker
+    locations.forEach(placeMarker);
+
+    google.maps.event.addDomListener(window, 'load', initMap);
 }
+
+
 
 
 
