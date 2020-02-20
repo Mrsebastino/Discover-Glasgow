@@ -58,26 +58,64 @@ h1 {
   text-align: center;
 }
 
-h5 {
+h3 {
   font-family: "Oswald", sans-serif;
   font-weight: 600;
   color: #ffffff;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 ul {
   list-style: none;
 }
 
+/*-- dropdow Menu link ---*/
+
+.dropdown {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 18px;
+  width: fit-content;
+  font-family: "Montserrat", sans-serif;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: rgb(182, 184, 185);
+}
+
+
+.dropdown-content {
+  display: none;
+  text-align: center;
+  background-color: #f1f1f1;
+  /* min-width: 160px;*/
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /* z-index: 1;*/
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
 
 /*---Section-restaurant-pub-culture---*/
 
 #more-art,
 #more-food,
 #more-drink {
-  margin-top: 3em;
-
+  margin-top: 2em;
 }
 
 .restaurantDetails,
@@ -90,7 +128,7 @@ ul {
   text-align: center;
   padding-left: 5em;
   padding-right: 5em;
-  padding-top: 4em;
+  padding-top: 2em;
   text-shadow: #000 50px 50px 10px;
   display: none;
   /** is too allow us to make it appear when we clicked on a button**/
@@ -111,7 +149,7 @@ ul {
 }
 
 .container-about {
-  margin-bottom: 8em;
+  margin-bottom: 6em;
   height: 100vh;
   background-image: url("../images/glasgow-goma.jpg");
   background-repeat: no-repeat;
