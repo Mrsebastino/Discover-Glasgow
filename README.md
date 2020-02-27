@@ -1,6 +1,6 @@
 <h1>Discover Glasgow</h1>
-This webpage is intented to promote Glasgow. It is seperated in three section,
-restaurant, pub and culture. Of which in each section there is three places,
+This webpage is intented to promote Glasgow. It is separated in three sections,
+restaurant, pub and culture. Of which in each section there is three placesthat are 
  recommended to go to experience the unique, style that Glasgow has to offer.
 <h3> Second Milestone. Interactive Frontend. Code Institute.</h3>
  
@@ -27,7 +27,8 @@ A live demo can be found at GitHub.
 </ul>
 
 <h3> Features</h3>
- 
+ In this project, i used a navbar snippets from Bootstrap as well as the footer, both
+ have been customized. I also used a snippets from W3Schools for the dropdown menu, this features as also been customized.I have tried to rename the `onClick=myFunction()` but it only return an error of undefined, i therefore left it that way.
 
 Bug encountered.
 
