@@ -1,5 +1,7 @@
 <h1>Discover Glasgow</h1>
-
+This webpage is intented to promote Glasgow. It is seperated in three section,
+restaurant, pub and culture. Of which in each section there is three places,
+ recommended to go to experience the unique, style that Glasgow has to offer.
 <h3> Second Milestone. Interactive Frontend. Code Institute.</h3>
  
 
