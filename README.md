@@ -1,31 +1,32 @@
-<h1>Discover Glasgow</h1>
-=========================
+# Discover Glasgow
 This webpage is intented to promote Glasgow. It is separated in three sections,
 restaurant, pub and culture. Of which in each section there is three placesthat are 
  recommended to go to experience the unique, style that Glasgow has to offer.
-<h3> Second Milestone. Interactive Frontend. Code Institute.</h3>
- 
+### **Second Milestone. Interactive Frontend. Code Institute.**
+---
 
-<h3> Demo </h3>
+ ### Demo
+ ---
 A live demo can be found at GitHub.  
 
-<h3>UX/UI</h3>
+### UX/UI
+---
 
 <h3></h3>
 
 
-<h3>Technologies Used</h3>
-<ul>
-<li>html  </li>
-<li>css </li>
-<li>JavaScript</li>
-<li>Google map API</li>
-<li>Bootstrap v 4.3.1</li>
-<li>Font Awsome</li>
-<li>Google Font</li>
-<li>JQuery</li>
-<li>POpper.js</li>
-</ul>
+### Technologies Used
+---
+
+* html 
+* css 
+* JavaScript
+* Google map API
+* Font Awsome
+* Google Font
+* JQuery
+* POpper.js
+* Bootstrap v 4.3.1
 
 <h3> Features</h3>
  In this project, i used a navbar snippets from Bootstrap as well as the footer, both
