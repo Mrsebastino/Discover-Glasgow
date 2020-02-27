@@ -1,4 +1,5 @@
--<h1>Discover Glasgow</h1>
+<h1>Discover Glasgow</h1>
+=========================
 This webpage is intented to promote Glasgow. It is separated in three sections,
 restaurant, pub and culture. Of which in each section there is three placesthat are 
  recommended to go to experience the unique, style that Glasgow has to offer.
