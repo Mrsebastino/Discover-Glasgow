@@ -2,58 +2,69 @@ const locations = [
     {
         lat: 55.87751, lng: -4.2914007,
         name: "Cail Bruich",
+        category: "restaurant",
         website: "https://www.cailbruich.co.uk/"
     },
 
     {
         lat: 55.8706124, lng: -4.3181257,
         name: "Basta Pizza",
+        category: "restaurant",
         website: "https://www.bastapizza.com/ "
     },
 
     {
         lat: 55.8723885, lng: -4.2847306,
         name: "Catch Fish & Chips",
+        category: "restaurant",
         website: "https://catchfishandchips.co.uk/"
     },
 
     {
         lat: 55.8682991, lng: -4.2933792,
         name: "Brew Dog West End",
+        category: "pub",
         website: "https://brewdog.com.co.uk/"
     },
 
     {
         lat: 55.8708818, lng: -4.2987629,
         name: "Lismore",
+        category: "pub",
         website: "https://www.facebook.com/LismoreBar/?rf=118642888189238/"
     },
 
     {
         lat: 55.8609006, lng: -4.2585135,
         name: " The Horseshoe Bar",
+        category: "pub",
         website: "https://www.thehorseshoebarglasgow.co.uk/"
     },
 
     {
         lat: 55.8685921, lng: -4.2927926,
         name: "The Kelvingrove Gallery",
+        category: "culture",
         website: "https://www.glasgowlife.org.uk/museums/venues/kelvingrove-art-gallery-and-museum/"
     },
 
     {
         lat: 55.865106, lng: -4.3083949,
         name: "The Transport Museum",
+        category: "culture",
         website: "https://www.glasgowlife.org.uk/museums/venues/riverside-museum/"
     },
 
     {
         lat: 55.8601344, lng: -4.2543698,
         name: "Gallery of Modern Art",
+        category: "culture",
         website: "https://www.glasgowlife.org.uk/museums/venues/gallery-of-modern-art-goma/"
     },
 ];
 
+// this section is to display markers on the map
+// taken from google developers
 function initMap() {
     let infowindow = new google.maps.InfoWindow();
     let options = {
@@ -61,10 +72,10 @@ function initMap() {
         zoom: 12
     };
 
-
     function placeMarker(location) {
         let placeMarker = new google.maps.Marker({
             position: new google.maps.LatLng(location.lat, location.lng),
+            animation: google.maps.Animation.DROP,
             map: map
         });
 
@@ -73,9 +84,10 @@ function initMap() {
             infowindow.open(map, placeMarker);
         });
 
-
     };
 
+    // this section of code is for the search bar
+    // from the google maps developers 
     map = new google.maps.Map(document.getElementById("map"), options);
     let input = document.getElementById("search");
     let searchBox = new google.maps.places.SearchBox(input);
@@ -119,29 +131,61 @@ function initMap() {
         map.fitBounds(bounds);
     });
 
-
     //pass every location to place marker
     locations.forEach(placeMarker);
-
     google.maps.event.addDomListener(window, 'load', initMap);
+
 }
 
+//show three choices
+function showChoices() {
+    let placeMarker = new google.maps.Marker({
+        position: new google.maps.LatLng(location.lat, location.lng),
+        animation: google.maps.Animation.DROP,
+        map: map
+    });
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// this section is to target marker from the dropdown menu
+function goToMarker() {
+    let options = {
+        center: new google.maps.LatLng(55.860916, -4.251433),
+        zoom: 12
+    };
+    map = new google.maps.Map(document.getElementById("map"), options);
+    let goToMarker = new google.maps.Marker({
+        position: new google.maps.LatLng(location.lat, location.lng),
+        animation: google.maps.Animation.DROP,
+        category: locations.category[""],
+        map: map
+    });
 
 
+    document.getElementById("#cultureMarker").addEventListener(goToMarker, "click", function (event) {
+        let choice = locations.category[""];
+        if (choice = "culture", choice < locations.length, choice++) {
+            locations.category.push(choice(new google.maps.Marker), {
+                position: new google.maps.LatLng(locations.lat, locations.lng),
+                animation: google.maps.Animation.DROP,
+                map: map
+            });
+            return goToMarker();
+        }
+    });
 
+    document.getElementById("#restaurantMarker").addListener(goToMarker, "click", function () {
+        let choice = locations.category[""];
+        if (choice = "restaurant") {
+            return;
+        }
+    });
 
+    document.getElementById("#pubMarker").addListener(goToMarker, "click", function () {
+        let choice = locations.category[""];
+        if (choice = "pub") {
+            return;
+        }
+    });
+}
 
-
-/* google.maps.event.trigger(marker, 'click');
-            infowindow.setContent(`<div id="infowindow">${locations.name} <a href=${location.website} target="_blank">Website</a></div >`);
-            infowindow.open(map, marker);*/
-
-/*need to build an if statement to work with locator
-$("#mapBasta").click(function () {
-google.maps.event.trigger("#mapBasta", "click", function () {
-    if (this.id === locations.locator) {
-        infowindow.setContent(`<div id="infowindow">${location.name} <a href=${location.website} target="_blank">Website</a></div >`);
-        infowindow.open(map, marker);
-    }
-});
-});*/
