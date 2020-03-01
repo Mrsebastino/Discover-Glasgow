@@ -1,8 +1,7 @@
 
 $(document).ready(function () {
-    //this is to have more information displayed when we click on button
-    // one is general info and one is a top 3
-    // the if/else acted as the media queries for mobile view
+    //this is to have more information displayed when we click on the button
+    // the if/else acted as the media queries for mobile view inpired from w3 school
     $("#more-food").click(function () {
         let rest_cont_detail = window.matchMedia("(min-width:768px)");
         if (window.matchMedia("(min-width:768px)").matches) {
@@ -36,14 +35,9 @@ $(document).ready(function () {
 
 })
 
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
 
 // Close the dropdown menu if the user clicks outside of it
-window.onclick = function (event) {
+/*window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
         let dropdowns = document.getElementsByClassName("dropdown-content");
         let i;
@@ -54,5 +48,20 @@ window.onclick = function (event) {
             }
         }
     }
-}
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
