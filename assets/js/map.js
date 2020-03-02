@@ -63,10 +63,10 @@ const locations = [
     },
 ];
 
-// this section is to display markers on the map
+// this section show the map
 // taken from google developers
 function initMap() {
-    let infowindow = new google.maps.InfoWindow();
+    // let infowindow = new google.maps.InfoWindow();
     let options = {
         center: new google.maps.LatLng(55.860916, -4.251433),
         zoom: 12
@@ -78,15 +78,15 @@ function initMap() {
             position: new google.maps.LatLng(location.lat, location.lng),
             animation: google.maps.Animation.DROP,
             map: map
-        });
+        });*/
 
-        // display the infowindow with the content
-        google.maps.event.addListener(placeMarker, "click", function () {
-            infowindow.setContent(`<div id="infowindow">${location.name} <a href=${location.website} target="_blank">Website</a></div >`);
-            infowindow.open(map, placeMarker);
-        });
+    // display the infowindow with the content
+    /* google.maps.event.addListener(placeMarker, "click", function () {
+         infowindow.setContent(`<div id="infowindow">${location.name} <a href=${location.website} target="_blank">Website</a></div >`);
+         infowindow.open(map, placeMarker);
+     });
 
-    };*/
+};*/
 
     // this section of code is for the search bar
     // from the google maps developers 
@@ -135,7 +135,7 @@ function initMap() {
 
     //pass every location to place marker
     //locations.forEach(placeMarker);
-    google.maps.event.addDomListener(window, 'load', initMap);
+    //google.maps.event.addDomListener(window, 'load', initMap);
 
 }
 
@@ -144,53 +144,58 @@ function showChoices() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
-// this section is to target marker from the dropdown menu
-document.getElementById("cultureMarker").addEventListener("click", function (event) {
-    console.log("hi");
-    let choice;
-    if (choice = "culture", choice < locations.length, choice++) {
-        locations[""].push(choice(), {
+//this section target my markers
+function showMarkers(locationCategory) {
+    let options = {
+        center: new google.maps.LatLng(55.860916, -4.251433),
+        zoom: 12
+    };
+    let infowindow = new google.maps.InfoWindow();
+    var map = new google.maps.Map(document.getElementById("map", options));
+
+    // set the markers 
+    for (let i = 0; i < locations.length; i++) {
+        if (locations[i].category === locationCategory) {
+            console.log("hello");
+            /* function placeMarker(location) {
+                 let placeMarker = new google.maps.Marker({
+                     position: new google.maps.LatLng(location.lat, location.lng),
+                     animation: google.maps.Animation.DROP,
+                     map: map
+                 });
+             }*/
+        };
+
+    }
+
+
+    /*document.getElementById("pubMarker").addEventListener("click", function (event) {
+        console.log("hello");
+        let choice;
+        for (choice = "pub"; choice < locations.length; choice++) {
+            locations.category.push(choice(new google.maps.Marker), {
+                position: new google.maps.LatLng(location.lat, location.lng),
+                animation: google.maps.Animation.DROP,
+                map: map
+            });
+            return goToMarker();
+        }
+    });*/
+    // this section show the marker
+
+    /*function goToMarker() {
+        map = new google.maps.Map(document.getElementById("map"), option);
+        let goToMarker = new google.maps.Marker({
             position: new google.maps.LatLng(location.lat, location.lng),
-            category: "culture",
             animation: google.maps.Animation.DROP,
             map: map
-        });
-        return goToMarker();
-    }
-});
+        });*/
 
-document.getElementById("restaurantMarker").addEventListener("click", function (event) {
-    console.log("hey");
-    let choice;
-    if (choice = "restaurant", choice < locations.length, choice++) {
-        locations.category.push(choice(new google.maps.Marker), {
-            position: new google.maps.LatLng(location.lat, location.lng),
-            animation: google.maps.Animation.DROP,
-            map: map
-        });
-        return goToMarker();
-    }
-});
-
-document.getElementById("pubMarker").addEventListener("click", function (event) {
-    console.log("hello");
-    let choice;
-    if (choice = "pub", choice < locations.length, choice++) {
-        locations.category.push(choice(new google.maps.Marker), {
-            position: new google.maps.LatLng(location.lat, location.lng),
-            animation: google.maps.Animation.DROP,
-            map: map
-        });
-        return goToMarker();
-    }
-});
-// this section show the marker
-function goToMarker() {
-    /* map = new google.maps.Map(document.getElementById("map"), options);
-     let goToMarker = new google.maps.Marker({
-         position: new google.maps.LatLng(location.lat, location.lng),
-         animation: google.maps.Animation.DROP,
-         map: map
-     });*/
-
+    // display the infowindow with the content
+    /*google.maps.event.addListener(showMarker, "click", function () {
+        infowindow.setContent(`<div id="infowindow">${location.name} <a href=${location.website} target="_blank">Website</a></div >`);
+        infowindow.open(map, showMarker);
+    });*/
+    //locations.forEach(placeMarker);
+    google.maps.event.addDomListener(window, 'load', initMap);
 }
