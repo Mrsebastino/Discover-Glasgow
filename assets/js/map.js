@@ -117,8 +117,6 @@ function initMap() {
         map.fitBounds(bounds);
     });
 
-    //pass every location to place marker
-    //locations.forEach(placeMarker);
     google.maps.event.addDomListener(window, 'load', initMap);
 
 }
@@ -130,6 +128,7 @@ function showChoices() {
 
 //this section target my markers
 function showMarkers(first, second, third) {
+
     let infowindow = new google.maps.InfoWindow();
     let marker1 = new google.maps.Marker({
         position: locations[first],
