@@ -66,27 +66,27 @@ const locations = [
 // this section show the map
 // taken from google developers
 function initMap() {
-    // let infowindow = new google.maps.InfoWindow();
+    let infowindow = new google.maps.InfoWindow();
     let options = {
         center: new google.maps.LatLng(55.860916, -4.251433),
         zoom: 12
     };
 
     // set the markers 
-    /*function placeMarker(location) {
+    /*function placeMarker(locations) {
         let placeMarker = new google.maps.Marker({
-            position: new google.maps.LatLng(location.lat, location.lng),
+            position: new google.maps.LatLng(locations.lat, locations.lng),
             animation: google.maps.Animation.DROP,
             map: map
-        });*/
+        });
 
-    // display the infowindow with the content
-    /* google.maps.event.addListener(placeMarker, "click", function () {
-         infowindow.setContent(`<div id="infowindow">${location.name} <a href=${location.website} target="_blank">Website</a></div >`);
-         infowindow.open(map, placeMarker);
-     });
- 
-};*/
+        // display the infowindow with the content
+        google.maps.event.addListener(placeMarker, "click", function () {
+            infowindow.setContent(`<div id="infowindow">${location.name} <a href=${location.website} target="_blank">Website</a></div >`);
+            infowindow.open(map, placeMarker);
+        });
+
+    };*/
 
     // this section of code is for the search bar
     // from the google maps developers 
@@ -135,7 +135,7 @@ function initMap() {
 
     //pass every location to place marker
     //locations.forEach(placeMarker);
-
+    google.maps.event.addDomListener(window, 'load', initMap);
 
 }
 
@@ -146,39 +146,55 @@ function showChoices() {
 
 //this section target my markers
 function showMarkers(first, second, third) {
-
+    let infowindow = new google.maps.InfoWindow();
     let marker1 = new google.maps.Marker({
         position: locations[first],
-        map: map,
+        map: map
     });
+
+    google.maps.event.addListener(marker1, "click", function () {
+        infowindow.setContent(`<div id="infowindow">${locations[first].name} <a href=${locations[first].website} target="_blank">Website</a></div >`);
+        infowindow.open(map, marker1);
+    });
+
     let marker2 = new google.maps.Marker({
         position: locations[second],
         map: map
     });
+
+    google.maps.event.addListener(marker2, "click", function () {
+        infowindow.setContent(`<div id="infowindow">${locations[second].name} <a href=${locations[second].website} target="_blank">Website</a></div >`);
+        infowindow.open(map, marker2);
+    });
+
     let marker3 = new google.maps.Marker({
         position: locations[third],
         map: map
     });
 
+    google.maps.event.addListener(marker3, "click", function () {
+        infowindow.setContent(`<div id="infowindow">${locations[third].name} <a href=${locations[third].website} target="_blank">Website</a></div >`);
+        infowindow.open(map, marker3);
+    });
+
     // set the markers 
-    function placeMarker(locations) {
-        let placeMarker = {
-            marker1: {
-                position: locations[first],
-                animation: google.maps.Animation.DROP,
-                map: map
-            }
-        };
-        let infowindow = new google.maps.InfoWindow();
-        // display the infowindow with the content
-        google.maps.event.addListener(placeMarker, "click", function () {
-            infowindow.setContent(`<div id="infowindow">${locations.name} <a href=${locations.website} target="_blank">Website</a></div >`);
-            infowindow.open(map, placeMarker);
-        });
-    }
-    locations.forEach(placeMarker);
-    google.maps.event.addDomListener(window, 'load', initMap);
+    /*function placeMarker(locations) {
+        let placeMarker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations.lat, locations.lng),
+            animation: google.maps.Animation.DROP,
+            map: map
+        });*/
+
+
+    // display the infowindow with the content
+    /*google.maps.event.addListener(marker1, "click", function () {
+        infowindow.setContent(`<div id="infowindow">${locations.name} <a href=${locations.website} target="_blank">Website</a></div >`);
+        infowindow.open(map, marker1);
+    });*/
 }
+//locations.forEach(placeMarker);
+//google.maps.event.addDomListener(window, 'load', map);
+
 //when below is uncommented map disappear when clicked
 /* let map = new google.maps.Map(document.getElementById("map"));*/
 
