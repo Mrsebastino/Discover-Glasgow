@@ -135,7 +135,7 @@ function initMap() {
 
     //pass every location to place marker
     //locations.forEach(placeMarker);
-    google.maps.event.addDomListener(window, 'load', initMap);
+
 
 }
 
@@ -145,57 +145,63 @@ function showChoices() {
 }
 
 //this section target my markers
-function showMarkers(locationCategory) {
-    /*let options = {
-        center: new google.maps.LatLng(locations.lat, locations.lng),
-        zoom: 12
-    };*/
-    let infowindow = new google.maps.InfoWindow();
-    /* let map = new google.maps.Map(document.getElementById("map"));*/
+function showMarkers(first, second, third) {
+
+    let marker1 = new google.maps.Marker({
+        position: locations[first],
+        map: map,
+    });
+    let marker2 = new google.maps.Marker({
+        position: locations[second],
+        map: map
+    });
+    let marker3 = new google.maps.Marker({
+        position: locations[third],
+        map: map
+    });
+
     // set the markers 
-    //iterate thru locations[] to target the selected category
-    for (let i = 0; i < locations.length; i++) {
-
-        if (locations[i].category === locationCategory) {
-
-            let placeMarker = {
-                position: (locations.lat, locations.lng),
+    function placeMarker(locations) {
+        let placeMarker = {
+            marker1: {
+                position: locations[first],
                 animation: google.maps.Animation.DROP,
                 map: map
-            };
-
-            google.maps.event.addListener(placeMarker, "click", function () {
-                infowindow.setContent(`<div id="infowindow">${locations.name} <a href=${locations.website} target="_blank">Website</a></div >`);
-                infowindow.open(map, placeMarker);
-            });
-        } console.log("hello");
-    };
-    //google.maps.event(showMarkers, "map");
-}
-
-
-
-/*document.getElementById("pubMarker").addEventListener("click", function (event) {
-    console.log("hello");
-    let choice;
-    for (choice = "pub"; choice < locations.length; choice++) {
-        locations.category.push(choice(new google.maps.Marker), {
-            position: new google.maps.LatLng(location.lat, location.lng),
-            animation: google.maps.Animation.DROP,
-            map: map
+            }
+        };
+        let infowindow = new google.maps.InfoWindow();
+        // display the infowindow with the content
+        google.maps.event.addListener(placeMarker, "click", function () {
+            infowindow.setContent(`<div id="infowindow">${locations.name} <a href=${locations.website} target="_blank">Website</a></div >`);
+            infowindow.open(map, placeMarker);
         });
-        return goToMarker();
     }
-});*/
-    // this section show the marker
+    locations.forEach(placeMarker);
+    google.maps.event.addDomListener(window, 'load', initMap);
+}
+//when below is uncommented map disappear when clicked
+/* let map = new google.maps.Map(document.getElementById("map"));*/
 
-/*function goToMarker() {
-    map = new google.maps.Map(document.getElementById("map"), option);
-    let goToMarker = new google.maps.Marker({
-        position: new google.maps.LatLng(location.lat, location.lng),
-        animation: google.maps.Animation.DROP,
-        map: map
-    });*/
+// set the markers 
+//iterate thru locations[] to target the selected category
+/*for (let i = 0; i < locations.length; i++) {
+
+    if (locations[i].category === locationCategory) {
+
+        let placeMarker = {
+            position: (locations.lat, locations.lng),
+            animation: google.maps.Animation.DROP,
+            map: map,
+        };
+        console.log("hello");
+        let infowindow = new google.maps.InfoWindow();
+        google.maps.event.addListener(placeMarker, "click", function () {
+            infowindow.setContent(`<div id="infowindow">${locations.name} <a href=${locations.website} target="_blank">Website</a></div >`);
+            infowindow.open(map, placeMarker);
+        });
+    }
+};*/
+//google.maps.event.addDomListener(window, 'load', map);
 
     // display the infowindow with the content
 /*google.maps.event.addListener(showMarker, "click", function () {
@@ -203,4 +209,4 @@ function showMarkers(locationCategory) {
     infowindow.open(map, showMarker);
 });*/
     //locations.forEach(placeMarker);
-    // google.maps.event.addDomListener(window, 'load', initMap);
+    // google.maps.event.addDomListener(window, 'load', initMap);*/
