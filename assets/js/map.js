@@ -144,6 +144,7 @@ function showMarkers(first, second, third) {
 
     let marker2 = new google.maps.Marker({
         position: locations[second],
+        animation: google.maps.Animation.DROP,
         map: map
     });
 
@@ -154,6 +155,7 @@ function showMarkers(first, second, third) {
 
     let marker3 = new google.maps.Marker({
         position: locations[third],
+        animation: google.maps.Animation.DROP,
         map: map
     });
 
