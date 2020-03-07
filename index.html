@@ -60,13 +60,13 @@
     <div class="dropdown container">
         <button onclick="showChoices()" class="dropbtn">Recommended Places</button>
         <div id="myDropdown" class="row dropdown-content">
-            <button>
+            <button onclick="showMarkers('culture')">
                 <li id="cultureMarker">Culture</li>
             </button>
-            <button>
+            <button onclick="showMarkers('restaurant')">
                 <li id="restaurantMarker">Restaurants</li>
             </button>
-            <button>
+            <button onclick="showMarkers('pub')">
                 <li id="pubMarker">Pubs</li>
             </button>
         </div>
