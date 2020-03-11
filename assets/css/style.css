@@ -7,7 +7,6 @@ body {
 /*-- the below code is too removed extra space on the right, the sames thing happened in my first milestone--*/
 .row {
   margin: 0;
-  padding: 0;
 }
 
 /*-----Nav-bar---*/
@@ -57,6 +56,14 @@ input {
 h1 {
   margin-top: 2em;
   margin-bottom: 1em;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+h2 {
+  padding-top: 1em;
+  color: #ffffff;
   font-family: "Oswald", sans-serif;
   font-weight: 700;
   text-align: center;
@@ -114,7 +121,13 @@ h3 {
 #more-art,
 #more-food,
 #more-drink {
-  margin-top: 2em;
+  margin-top: 15px;
+}
+
+#moreArtButton,
+#moreFoodButton,
+#moreDrinkButton {
+  margin-top: 15px;
 }
 
 .restaurantDetails,
@@ -140,7 +153,7 @@ h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 20px;
-  padding-top: 3em;
+  padding-top: 3px;
   text-shadow: #000 1px 10px 10px;
   text-align: center;
   display: none;
@@ -208,12 +221,14 @@ div#map {
 
 #footer {
   position: fixed;
+  height: 100px;
   bottom: 0;
   background-color: #343a40;
   text-align: center;
 }
 
 a.logo-footer {
+  padding-top: 10px;
   color: #ffffff;
   font-weight: 500;
   text-decoration: none;
@@ -257,5 +272,38 @@ a.logo-footer {
 @media (max-width: 700px) {
   .intro {
     font-size: 75%;
+  }
+}
+
+@media (max-width: 700px) {
+  .cultureDetails,
+  .restaurantDetails,
+  .pubDetails {
+    font-size: 12px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  .recommendedRestaurant,
+  .recommendedPubs,
+  .recommendedCulture {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1020px) {
+  .intro {
+    font-size: 15px;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1020px) {
+  .cultureDetails,
+  .restaurantDetails,
+  .pubDetails {
+    font-size: 12px;
   }
 }
