@@ -141,7 +141,7 @@ h3 {
   padding-left: 5em;
   padding-right: 5em;
   padding-top: 2em;
-  text-shadow: #000 50px 50px 10px;
+  text-shadow: rgb(0, 0, 0) 10px 10px 10px;
   display: none;
   /** is too allow us to make it appear when we clicked on a button**/
 }
@@ -154,7 +154,7 @@ h3 {
   font-weight: 500;
   font-size: 20px;
   padding-top: 3px;
-  text-shadow: #000 1px 10px 10px;
+  text-shadow: rgb(0, 0, 0) 10px 10px 10px;
   text-align: center;
   display: none;
   /** is too allow us to make it appear when we clicked on a button**/
