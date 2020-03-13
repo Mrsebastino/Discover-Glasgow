@@ -36,6 +36,7 @@ $(document).ready(function () {
 })
 
 // Close the dropdown menu if the user clicks outside of it
+// inspired from w3school
 window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
         let dropdowns = document.getElementsByClassName("dropdown-content");

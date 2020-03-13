@@ -89,7 +89,7 @@ function initMap() {
     searchBox.addListener("places_changed", function () {
         let places = searchBox.getPlaces();
 
-        if (places.lenght === 0)
+        if (places.length === 0)
             return;
 
         // to clear any markers from previous search
@@ -121,12 +121,16 @@ function initMap() {
 
 }
 
-//show three choices from dropdown menu
+//show the three choices from dropdown menu
+// restaurant, pub or culture
 function showChoices() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
+// when we click on one of the choices
 //this section target my markers
+// the parameters represent the index location of each markers in the const locations.
+//each section target three locations each
 function showMarkers(first, second, third) {
 
     let infowindow = new google.maps.InfoWindow();
@@ -136,11 +140,12 @@ function showMarkers(first, second, third) {
         map: map
     });
 
+    //this section dislpay the info in the infowindow
     google.maps.event.addListener(marker1, "click", function () {
         infowindow.setContent(`<div id="infowindow">${locations[first].name} <a href=${locations[first].website} target="_blank">Website</a></div >`);
         infowindow.open(map, marker1);
     });
-
+    // this section is for the second marker 
     let marker2 = new google.maps.Marker({
         position: locations[second],
         animation: google.maps.Animation.DROP,
@@ -151,7 +156,7 @@ function showMarkers(first, second, third) {
         infowindow.setContent(`<div id="infowindow">${locations[second].name} <a href=${locations[second].website} target="_blank">Website</a></div >`);
         infowindow.open(map, marker2);
     });
-
+    //  this section if for the third marker
     let marker3 = new google.maps.Marker({
         position: locations[third],
         animation: google.maps.Animation.DROP,
