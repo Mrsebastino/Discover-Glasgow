@@ -18,7 +18,7 @@ The webpage goals is to:
  ### Demo
  ---
  Click here for live Demo
- [Discover Glasgow](https://mrsebastino.github.io/Second-milestone/ "Discover Glasgow")
+ [Discover Glasgow](https://mrsebastino.github.io/Discover-Glasgow/ "Discover Glasgow")
   
 
 ### UX
